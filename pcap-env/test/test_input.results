@@ -1,0 +1,8 @@
+---------------------------------------------------------
+Number of received packets: 1066
+Number of parsed packets: 0
+Number of dropped packets: 1066
+	Due to firewall rules: 1066
+	Due to sessionID mismatch: 0
+	Due to payload parsing: 0
+Median CPU reference cycle count: 9849

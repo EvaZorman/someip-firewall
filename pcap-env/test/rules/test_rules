@@ -1,0 +1,15 @@
+rule 
+    source clientID=0x123 
+    destination serviceID=0x5678 methodID=any 
+    action=accept
+
+rule source clientID=0x123 destination serviceID=0x5678 methodID=0x556 action=accept
+
+# Duplicate rule. Also testing comments
+rule source clientID=0x123 destination serviceID=0x5678 methodID=any action=accept
+
+rule source clientID=0x1234 destination serviceID=0x5678 methodID=any log prefix=test level=alert action=accept
+
+rule source clientID=any destination serviceID=any methodID=any action=accept
+#rule source clientID=any destination serviceID=any methodID=any action=deny
+

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<devices>
+<!-- Servers ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<device name="SomeIPServer0x1000" type="server" mac="02:1A:AA:AA:AA:AA" ip="10.0.0.1" sendPort="30491" recPort="30491" />
+
+<!-- Clients ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<device name="SomeIPClient0x2000" type="client" clientID="2000" mac="02:2B:BB:BB:BB:BB" ip="10.0.0.2" sendPort="30501" recPort="30501" />
+	<device name="SomeIPClient0x3000" type="client" clientID="3000" mac="02:3B:BB:BB:BB:BB" ip="10.0.0.3" sendPort="30501" recPort="30501" />
+	<device name="SomeIPClient0x4000" type="client" clientID="4000" mac="02:4B:BB:BB:BB:BB" ip="10.0.0.4" sendPort="30501" recPort="30501" />
+
+<!-- Attacker ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<device name="Attacker" type="attacker" clientID="5000" mac="02:5C:CC:CC:CC:CC" ip="10.0.0.5" sendPort="30501" recPort="30501" />
+</devices>

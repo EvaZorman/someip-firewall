@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<services>	
+
+	<service id="0x1000">
+		<!-- Methods -->
+		<method id="0x7918" type="REQUEST" >
+			<client id="SomeIPClient0x2000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x3000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x4000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+		</method>
+		<method id="0x7919" type="REQUEST" >
+			<client id="SomeIPClient0x2000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x3000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x4000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+		</method>
+		<method id="0x791A" type="REQUEST_NO_RETURN" >
+			<client id="SomeIPClient0x2000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x3000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x4000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+		</method>
+		<method id="0x791B" type="REQUEST_NO_RETURN" >
+			<client id="SomeIPClient0x2000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x3000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+			<client id="SomeIPClient0x4000" timesensitive="false" min="1" max="10" resendMin="2" resendMax="3" />
+		</method>
+	</service>
+
+</services>

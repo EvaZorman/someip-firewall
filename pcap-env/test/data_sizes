@@ -1,0 +1,43 @@
+TEST FILE SIZES:
+-rw-rw-r-- 1 ez ez     3.4K May  2 07:25 BenchmarkFirewall.cpp
+-rw-rw-r-- 1 ez ez     150K May  8 12:29 error_on_error_dataset.pcap
+-rw-rw-r-- 1 ez ez     433K May  8 13:02 error_on_error_dataset.results
+-rw-rw-r-- 1 ez ez     126K May  8 12:29 error_on_event_dataset.pcap
+-rw-rw-r-- 1 ez ez     351K May  8 13:03 error_on_event_dataset.results
+-rw-rw-r-- 1 ez ez     492K May  8 12:29 malformed_payload_dataset.pcap
+-rw-rw-r-- 1 ez ez     264K May  8 12:54 malformed_payload_dataset.results
+-rw-r--r-- 1 ez ez     141K May  8 14:14 massif.both.out
+-rw-r--r-- 1 ez ez     108K May  8 14:12 massif.heap.out
+-rw-r--r-- 1 ez ez      12K May  8 14:14 massif.stacks.out
+-rw-rw-r-- 1 ez ez     423K May  8 12:29 normal_dataset.pcap
+-rw-rw-r-- 1 ez ez      12K May  8 14:09 normal_dataset.results
+-rw-rw-r-- 1 ez ez     1.3M May  8 14:01 normal_dataset_firewall_ruleset1.results
+-rw-rw-r-- 1 ez ez     972K May  8 14:05 normal_dataset_firewall_ruleset10.results
+-rw-rw-r-- 1 ez ez     1.3M May  8 14:00 normal_dataset_firewall_ruleset2.results
+-rw-rw-r-- 1 ez ez     1.2M May  8 14:04 normal_dataset_firewall_ruleset5.results
+-rw-rw-r-- 1 ez ez     1.3M May  8 13:06 normal_dataset_firewall_ruleset7.results
+
+-rwxrwxr-x 1 ez ez     3.8M May  8 13:59 firewall-benchmark
+
+$ ldd build/firewall-benchmark 
+	linux-vdso.so.1 (0x0000ffff8136e000)
+	libboost_regex.so.1.74.0 => /lib/aarch64-linux-gnu/libboost_regex.so.1.74.0 (0x0000ffff810f0000)
+	libpcap.so.0.8 => /lib/aarch64-linux-gnu/libpcap.so.0.8 (0x0000ffff81090000)
+	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffff80e60000)
+	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffff80dc0000)
+	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffff80d90000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffff80be0000)
+	/lib/ld-linux-aarch64.so.1 (0x0000ffff81335000)
+	libicui18n.so.70 => /lib/aarch64-linux-gnu/libicui18n.so.70 (0x0000ffff808b0000)
+	libicuuc.so.70 => /lib/aarch64-linux-gnu/libicuuc.so.70 (0x0000ffff806a0000)
+	libdbus-1.so.3 => /lib/aarch64-linux-gnu/libdbus-1.so.3 (0x0000ffff80640000)
+	libicudata.so.70 => /lib/aarch64-linux-gnu/libicudata.so.70 (0x0000ffff7ea10000)
+	libsystemd.so.0 => /lib/aarch64-linux-gnu/libsystemd.so.0 (0x0000ffff7e930000)
+	liblzma.so.5 => /lib/aarch64-linux-gnu/liblzma.so.5 (0x0000ffff7e8f0000)
+	libzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000ffff7e820000)
+	liblz4.so.1 => /lib/aarch64-linux-gnu/liblz4.so.1 (0x0000ffff7e7f0000)
+	libcap.so.2 => /lib/aarch64-linux-gnu/libcap.so.2 (0x0000ffff7e7d0000)
+	libgcrypt.so.20 => /lib/aarch64-linux-gnu/libgcrypt.so.20 (0x0000ffff7e6e0000)
+	libgpg-error.so.0 => /lib/aarch64-linux-gnu/libgpg-error.so.0 (0x0000ffff7e6a0000)
+
+

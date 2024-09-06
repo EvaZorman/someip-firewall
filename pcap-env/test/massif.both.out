@@ -1,0 +1,1143 @@
+desc: --stacks=yes --time-unit=B
+cmd: ./build/firewall-benchmark
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=7933864
+mem_heap_B=243984
+mem_heap_extra_B=23608
+mem_stacks_B=3872
+heap_tree=detailed
+n16: 243984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 32816 0x4D82593: __alloc_dir (opendir.c:115)
+  n1: 32816 0x4D82C47: fdopendir (fdopendir.c:50)
+   n1: 32816 0x4B3D8BF: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+    n1: 32816 0x4B3EB4F: std::filesystem::__cxx11::recursive_directory_iterator::recursive_directory_iterator(std::filesystem::__cxx11::path const&, std::filesystem::directory_options, std::error_code*) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+     n1: 32816 0x132863: std::filesystem::__cxx11::recursive_directory_iterator::recursive_directory_iterator(std::filesystem::__cxx11::path const&) (fs_dir.h:474)
+      n1: 32816 0x130797: InterfaceParser::_parse_files() (InterfaceParser.cpp:62)
+       n1: 32816 0x132A93: InterfaceParser::InterfaceParser() (InterfaceParser.hpp:18)
+        n1: 32816 0x13067B: InterfaceParser::get_instance() (InterfaceParser.cpp:48)
+         n1: 32816 0x14E7B7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+          n1: 32816 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+           n0: 32816 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n0: 16551 in 50 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 8192 0x4ADDA33: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 8192 0x4AE146B: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x4AE229F: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+    n1: 8192 0x133877: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream<std::filesystem::__cxx11::path, std::filesystem::__cxx11::path>(std::filesystem::__cxx11::path const&, std::_Ios_Openmode) (fstream:586)
+     n1: 8192 0x130C67: InterfaceParser::_parse_fidl(std::filesystem::__cxx11::path, FModel&) (InterfaceParser.cpp:92)
+      n1: 8192 0x13095B: InterfaceParser::_parse_files() (InterfaceParser.cpp:73)
+       n1: 8192 0x132A93: InterfaceParser::InterfaceParser() (InterfaceParser.hpp:18)
+        n1: 8192 0x13067B: InterfaceParser::get_instance() (InterfaceParser.cpp:48)
+         n1: 8192 0x14E7B7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+          n1: 8192 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+           n0: 8192 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5698 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 167 places, all below massif's threshold (1.00%)
+  n0: 68 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+#-----------
+snapshot=2
+#-----------
+time=11715056
+mem_heap_B=208525
+mem_heap_extra_B=24083
+mem_stacks_B=2192
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=20138888
+mem_heap_B=214865
+mem_heap_extra_B=24167
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=25375608
+mem_heap_B=214867
+mem_heap_extra_B=24165
+mem_stacks_B=2016
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=32916960
+mem_heap_B=217163
+mem_heap_extra_B=24117
+mem_stacks_B=1296
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=39983624
+mem_heap_B=221527
+mem_heap_extra_B=24161
+mem_stacks_B=1792
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=44873544
+mem_heap_B=221157
+mem_heap_extra_B=24099
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=49215584
+mem_heap_B=221377
+mem_heap_extra_B=24127
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=55728968
+mem_heap_B=221157
+mem_heap_extra_B=24099
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=63871424
+mem_heap_B=221376
+mem_heap_extra_B=24128
+mem_stacks_B=1328
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=69311344
+mem_heap_B=229727
+mem_heap_extra_B=24145
+mem_stacks_B=1280
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=75132568
+mem_heap_B=229719
+mem_heap_extra_B=24161
+mem_stacks_B=1632
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=81840968
+mem_heap_B=229795
+mem_heap_extra_B=24181
+mem_stacks_B=1456
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=86038968
+mem_heap_B=229349
+mem_heap_extra_B=24099
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=92749896
+mem_heap_B=229715
+mem_heap_extra_B=24165
+mem_stacks_B=1808
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=97782440
+mem_heap_B=229475
+mem_heap_extra_B=24117
+mem_stacks_B=1264
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=105329752
+mem_heap_B=229719
+mem_heap_extra_B=24161
+mem_stacks_B=1696
+heap_tree=detailed
+n17: 229719 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n0: 18474 in 76 places, all below massif's threshold (1.00%)
+ n1: 16384 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 16384 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 16384 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 16384 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 16384 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 16384 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 16384 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=112882456
+mem_heap_B=229349
+mem_heap_extra_B=24099
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=116473544
+mem_heap_B=262464
+mem_heap_extra_B=24152
+mem_stacks_B=1600
+heap_tree=detailed
+n17: 262464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 49152 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 49152 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 49152 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 49152 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 49152 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 49152 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 49152 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n0: 18451 in 76 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=121517448
+mem_heap_B=245733
+mem_heap_extra_B=24099
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=127823464
+mem_heap_B=245733
+mem_heap_extra_B=24099
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=134126584
+mem_heap_B=246111
+mem_heap_extra_B=24169
+mem_stacks_B=1856
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=137911016
+mem_heap_B=245733
+mem_heap_extra_B=24099
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=145474512
+mem_heap_B=246091
+mem_heap_extra_B=24149
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=150516928
+mem_heap_B=246087
+mem_heap_extra_B=24153
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=154301832
+mem_heap_B=245733
+mem_heap_extra_B=24099
+mem_stacks_B=5712
+heap_tree=detailed
+n17: 245733 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 32768 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 32768 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 32768 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 32768 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 32768 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 32768 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 32768 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n0: 18104 in 76 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=159344104
+mem_heap_B=246159
+mem_heap_extra_B=24153
+mem_stacks_B=2288
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=163129960
+mem_heap_B=246121
+mem_heap_extra_B=24159
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=169433256
+mem_heap_B=246179
+mem_heap_extra_B=24181
+mem_stacks_B=2592
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=177910464
+mem_heap_B=246083
+mem_heap_extra_B=24141
+mem_stacks_B=1760
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=182252536
+mem_heap_B=246155
+mem_heap_extra_B=24157
+mem_stacks_B=1952
+heap_tree=detailed
+n17: 246155 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 32768 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 32768 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 32768 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 32768 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 32768 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 32768 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 32768 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n0: 18526 in 76 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=188767944
+mem_heap_B=245733
+mem_heap_extra_B=24099
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=195280968
+mem_heap_B=246097
+mem_heap_extra_B=24167
+mem_stacks_B=1632
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=199622984
+mem_heap_B=246103
+mem_heap_extra_B=24161
+mem_stacks_B=2144
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=203966168
+mem_heap_B=246163
+mem_heap_extra_B=24181
+mem_stacks_B=2432
+heap_tree=detailed
+n17: 246163 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 32768 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 32768 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 32768 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 32768 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 32768 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 32768 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 32768 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n0: 18534 in 76 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=210481880
+mem_heap_B=246103
+mem_heap_extra_B=24161
+mem_stacks_B=2192
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=218314008
+mem_heap_B=311619
+mem_heap_extra_B=24149
+mem_stacks_B=1600
+heap_tree=peak
+n17: 311619 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 98304 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 98304 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 98304 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 98304 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 98304 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 98304 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 98304 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n0: 18454 in 76 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=222662808
+mem_heap_B=278501
+mem_heap_extra_B=24099
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=227004840
+mem_heap_B=278871
+mem_heap_extra_B=24161
+mem_stacks_B=1648
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=233517928
+mem_heap_B=278501
+mem_heap_extra_B=24099
+mem_stacks_B=5792
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=237859944
+mem_heap_B=278871
+mem_heap_extra_B=24161
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=244372952
+mem_heap_B=278871
+mem_heap_extra_B=24161
+mem_stacks_B=2208
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=248714936
+mem_heap_B=278947
+mem_heap_extra_B=24181
+mem_stacks_B=2496
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=253057056
+mem_heap_B=278860
+mem_heap_extra_B=24148
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=259570160
+mem_heap_B=278855
+mem_heap_extra_B=24153
+mem_stacks_B=1456
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=266083280
+mem_heap_B=278563
+mem_heap_extra_B=24109
+mem_stacks_B=1280
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=272596328
+mem_heap_B=278879
+mem_heap_extra_B=24169
+mem_stacks_B=1664
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=279109328
+mem_heap_B=279014
+mem_heap_extra_B=24122
+mem_stacks_B=1584
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=283451344
+mem_heap_B=279014
+mem_heap_extra_B=24122
+mem_stacks_B=1264
+heap_tree=detailed
+n17: 279014 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4A6EAF7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017CC7: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 65536 0x12FF93: __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 65536 0x12FB3B: std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) (alloc_traits.h:464)
+   n1: 65536 0x12F427: std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 65536 0x12ED07: void std::vector<long, std::allocator<long> >::_M_realloc_insert<long>(__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long&&) (vector.tcc:440)
+     n1: 65536 0x12E84F: long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) (vector.tcc:121)
+      n1: 65536 0x12DF6B: std::vector<long, std::allocator<long> >::push_back(long&&) (stl_vector.h:1204)
+       n0: 65536 0x12CC2F: main (BenchmarkFirewall.cpp:67)
+ n0: 18617 in 76 places, all below massif's threshold (1.00%)
+ n2: 16384 0x48EDCFB: boost::re_detail_107400::raw_storage::resize(unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 16384 0x48EDDBF: boost::re_detail_107400::raw_storage::insert(unsigned long, unsigned long) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+   n1: 16384 0x48DD10B: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+    n2: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+     n1: 16384 0x48DA8DF: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+      n1: 16384 0x48D9C77: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+       n1: 16384 0x48D8A0F: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+        n1: 16384 0x14489B: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:398)
+         n1: 16384 0x1435C7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:383)
+          n1: 16384 0x142787: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:352)
+           n1: 16384 0x141057: __static_initialization_and_destruction_0(int, int) (RuleGenerator.cpp:47)
+            n1: 16384 0x1413A7: _GLOBAL__sub_I__Z12is_value_hexRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (RuleGenerator.cpp:363)
+             n1: 16384 0x4CF754B: call_init (libc-start.c:145)
+              n1: 16384 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+               n0: 16384 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 15648 0x1DEAF7: std::map<unsigned int, pcpp::SSLCipherSuite*, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, pcpp::SSLCipherSuite*> > >::operator[](unsigned int&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15648 in 326 places, all below massif's threshold (1.00%)
+ n1: 15552 0x1DE91B: std::map<unsigned short, pcpp::SSLCipherSuite*, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, pcpp::SSLCipherSuite*> > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 15552 in 324 places, all below massif's threshold (1.00%)
+ n1: 13520 0x4D0D0BF: __new_exitfn (cxa_atexit.c:114)
+  n1: 13520 0x4D0D15B: __internal_atexit (cxa_atexit.c:44)
+   n0: 13520 in 12 places, all below massif's threshold (1.00%)
+ n1: 11487 0x1218D3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 11487 in 329 places, all below massif's threshold (1.00%)
+ n2: 9576 0x1BF6EB: std::_Rb_tree_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned short, std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned short&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned short&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7200 0x1C39DB: std::map<unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](unsigned short&&) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n0: 7200 in 100 places, all below massif's threshold (1.00%)
+  n0: 2376 in 33 places, all below massif's threshold (1.00%)
+ n1: 7832 0x1AEDE7: std::_Hashtable<pcpp::HttpResponseStatusCode, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__detail::_Select1st, std::equal_to<pcpp::HttpResponseStatusCode>, pcpp::HttpResponseStatusCodeHash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*>(std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const*, unsigned long, pcpp::HttpResponseStatusCodeHash const&, std::equal_to<pcpp::HttpResponseStatusCode> const&, std::allocator<std::pair<pcpp::HttpResponseStatusCode const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 7832 0x11F9BB: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 7832 0x4CF754B: call_init (libc-start.c:145)
+    n1: 7832 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 7832 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n2: 5630 0x4B13473: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 5630 0x4B14537: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+   n0: 5630 in 169 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x4D388F3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x4D471FF: _IO_doallocbuf (genops.c:347)
+   n2: 5120 0x4D471FF: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4D45453: _IO_file_xsgetn (fileops.c:1287)
+     n1: 4096 0x4D39907: fread (iofread.c:38)
+      n1: 4096 0x4996203: pcap_fopen_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+       n1: 4096 0x499646F: pcap_open_offline_with_tstamp_precision (in /usr/lib/aarch64-linux-gnu/libpcap.so.1.10.1)
+        n1: 4096 0x1565D3: pcpp::PcapFileReaderDevice::open() (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+         n0: 4096 0x12CB3F: main (BenchmarkFirewall.cpp:45)
+    n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n1: 4968 0x1A31BB: std::_Rb_tree_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<unsigned char const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<unsigned char&&>&&, std::tuple<>&&) [clone .isra.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n0: 4968 in 69 places, all below massif's threshold (1.00%)
+ n1: 4648 0x1AFD3B: std::_Hashtable<int, std::pair<int const, pcpp::HttpResponseStatusCode>, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<int const, pcpp::HttpResponseStatusCode> const*>(std::pair<int const, pcpp::HttpResponseStatusCode> const*, std::pair<int const, pcpp::HttpResponseStatusCode> const*, unsigned long, std::hash<int> const&, std::equal_to<int> const&, std::allocator<std::pair<int const, pcpp::HttpResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4648 0x11F0FF: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4648 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4648 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4648 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4312 0x1CB553: std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, pcpp::SipResponseLayer::SipResponseStatusCode> > const&, std::integral_constant<bool, true>) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+  n1: 4312 0x1210C3: __static_initialization_and_destruction_0(int, int) [clone .constprop.0] (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+   n1: 4312 0x4CF754B: call_init (libc-start.c:145)
+    n1: 4312 0x4CF754B: __libc_start_main@@GLIBC_2.34 (libc-start.c:379)
+     n0: 4312 0x12C8AF: (below main) (in /home/ez/thesis-implementation/service/firewall/build/firewall-benchmark)
+ n1: 4096 0x48A2C1F: ??? (in /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.74.0)
+  n1: 4096 0x145203: bool boost::regex_search<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_search.hpp:56)
+   n1: 4096 0x143C9F: boost::regex_token_iterator_implementation<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::init(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (regex_token_iterator.hpp:105)
+    n1: 4096 0x142C1B: boost::regex_token_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_token_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, int, boost::regex_constants::_match_flags) (regex_token_iterator.hpp:188)
+     n1: 4096 0x13FDE3: RuleGenerator::_load_rules() (RuleGenerator.cpp:110)
+      n1: 4096 0x141D47: RuleGenerator::RuleGenerator() (RuleGenerator.hpp:87)
+       n1: 4096 0x13FC23: RuleGenerator::get_instance() (RuleGenerator.cpp:92)
+        n1: 4096 0x14E7C7: PacketHandler::PacketHandler() (PacketHandler.hpp:40)
+         n1: 4096 0x14D72F: PacketHandler::get_instance() (PacketHandler.cpp:372)
+          n0: 4096 0x12CBAF: main (BenchmarkFirewall.cpp:53)
+ n1: 3384 0x138A83: __gnu_cxx::new_allocator<BaseValue>::allocate(unsigned long, void const*) (new_allocator.h:127)
+  n1: 3384 0x137B73: std::allocator_traits<std::allocator<BaseValue> >::allocate(std::allocator<BaseValue>&, unsigned long) (alloc_traits.h:464)
+   n2: 3384 0x136797: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 3384 0x13AA2B: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_M_create_storage(unsigned long) (stl_vector.h:361)
+     n1: 3384 0x13A897: std::_Vector_base<BaseValue, std::allocator<BaseValue> >::_Vector_base(unsigned long, std::allocator<BaseValue> const&) (stl_vector.h:305)
+      n1: 3384 0x13A753: std::vector<BaseValue, std::allocator<BaseValue> >::vector(std::vector<BaseValue, std::allocator<BaseValue> > const&) (stl_vector.h:555)
+       n0: 3384 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)

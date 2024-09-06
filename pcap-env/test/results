@@ -1,0 +1,27 @@
+--------------------------------------------------
+WITHOUT AN ATTACKER:
+
+ERROR ON ERROR:
+Attacker  - BREAK - with  0  successful attacks
+Writer Stoped By Attacker
+Number of Packets generated:  2119548
+Time to generate Packets: 974.831342458725
+
+WRONG INTERFACE:
+Attacker  - BREAK - with  432  successful attacks
+Writer Stoped By Attacker
+Number of Packets generated:  2121652
+Time to generate Packets: 985.3201897144318
+
+ERROR ON ERROR
+Attacker  - BREAK - with  429  successful attacks
+Writer Stoped By Attacker
+Number of Packets generated:  2121162
+Time to generate Packets: 979.486542224884
+
+MALFORMED PAYLOAD
+Attacker  - BREAK - with  401  successful attacks
+Writer Stoped By Attacker
+Number of Packets generated:  2120912
+Time to generate Packets: 977.846494436264
+

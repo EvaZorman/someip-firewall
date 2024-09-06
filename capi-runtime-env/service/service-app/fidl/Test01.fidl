@@ -1,0 +1,14 @@
+package commonapi.examples
+
+interface Test01 {
+    version { major 0 minor 1 }
+
+    method getInt {
+        in {
+            UInt32 x
+        }
+        out {
+            UInt32 y
+        }
+    }
+}

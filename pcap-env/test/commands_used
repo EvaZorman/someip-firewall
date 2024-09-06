@@ -1,0 +1,8 @@
+VALGRIND:
+$ SOMEIP_FIREWALL_IN_FILE=test/normal_dataset.pcap valgrind --tool=massif --time-unit=B ./build/firewall-benchmark 				# heap only
+$ SOMEIP_FIREWALL_IN_FILE=test/normal_dataset.pcap valgrind --tool=massif --stacks=yes --heap=no --time-unit=B ./build/firewall-benchmark 	# stack only
+$ SOMEIP_FIREWALL_IN_FILE=test/normal_dataset.pcap valgrind --tool=massif --stacks=yes --time-unit=B ./build/firewall-benchmark 		# both
+
+FIREWALL_BENCHMARK:
+$ SOMEIP_FIREWALL_IN_FILE=test/normal_dataset.pcap ./build/firewall-benchmark &> test/normal_dataset_firewall_ruleset10.results 
+

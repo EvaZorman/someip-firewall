@@ -1,0 +1,180 @@
+package commonapi.examples
+
+interface TestInterface {
+    version { major 0 minor 1 }
+
+    method getUInt8 {
+        in {
+            UInt8 in
+        }
+
+        out {
+            UInt8 out
+        }
+    }
+
+    method getUInt16 {
+        in {
+            UInt16 in
+        }
+
+        out {
+            UInt16 out
+        }
+    }
+
+    method getUInt32 {
+        in {
+            UInt32 in
+        }
+
+        out {
+            UInt32 out
+        }
+    }
+
+    method getUInt64 {
+        in {
+            UInt64 in
+        }
+
+        out {
+            UInt64 out
+        }
+    }
+
+    method getInt8 {
+        in {
+            Int8 in
+        }
+
+        out {
+            Int8 out
+        }
+    }
+
+    method getInt16 {
+        in {
+            Int16 in
+        }
+
+        out {
+            Int16 out
+        }
+    }
+
+    method getInt32 {
+        in {
+            Int32 in
+        }
+
+        out {
+            Int32 out
+        }
+    }
+
+    method getInt64 {
+        in {
+            Int64 in
+        }
+
+        out {
+            Int64 out
+        }
+    }
+
+    method getInteger {
+        in {
+            Integer in
+        }
+
+        out {
+            Integer out
+        }
+    }
+
+    method getBoolean {
+        in {
+            Boolean in
+        }
+
+        out {
+            Boolean out
+        }
+    }
+    
+    method getFloat {
+        in {
+            Float in
+        }
+
+        out {
+            Float out
+        }
+    }
+
+    method getDouble {
+        in {
+            Double in
+        }
+
+        out {
+            Double out
+        }
+    }
+
+    method getString {
+        in {
+            String in
+        }
+
+        out {
+            String out
+        }
+    }
+
+    method getManyString {
+        in {
+            Integer in
+        }
+        out {
+            String one
+            String two
+            String three
+            String four
+        }
+    }
+
+    method getMixed {
+        in {
+            Float a
+            Double b
+            Boolean c
+        }
+
+        out {
+            UInt16 d
+            Int64 e
+            String f
+            String g
+        }
+    }
+
+    method setManyString {
+        in {
+            String one
+            String two
+            String three
+        }
+    }
+
+    method setMixed {
+        in {
+            String a
+            Float b
+            Boolean c
+            UInt16 d
+        }
+    }    
+}
+

@@ -1,0 +1,49 @@
+rule 
+    source clientID=2000 
+    destination serviceID=0x1000 methodID=31000 
+    action=accept
+
+rule 
+    source clientID=3000 
+    destination serviceID=0x1000 methodID=31000
+    action=accept
+
+rule 
+    source clientID=3000 
+    destination serviceID=0x1000 methodID=31001
+    action=accept
+
+rule 
+    source clientID=3000 
+    destination serviceID=0x1000 methodID=31002
+    action=accept
+
+rule 
+    source clientID=4000 
+    destination serviceID=0x1000 methodID=31002 
+    action=accept
+
+rule 
+    source clientID=4000 
+    destination serviceID=0x1000 methodID=31003 
+    action=accept
+
+rule
+    source clientID=any
+    destination serviceID=0x1000 methodID=31016
+    action=accept
+
+rule
+    source clientID=4000
+    destination serviceID=0x1000 methodID=31015
+    action=accept
+
+rule
+    source clientID=any
+    destination serviceID=any methodID=31010
+    action=accept
+
+rule 
+    source clientID=any 
+    destination serviceID=any methodID=any 
+    action=deny

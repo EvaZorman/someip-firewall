@@ -1,0 +1,97 @@
+import "platform:/plugin/org.genivi.commonapi.someip/deployment/CommonAPI-4-SOMEIP_deployment_spec.fdepl"
+import "TestInterface.fidl"
+
+define org.genivi.commonapi.someip.deployment for interface commonapi.examples.TestInterface {
+    SomeIpServiceID = 0x1000
+
+package commonapi.examples
+
+interface TestInterface {
+    version { major 0 minor 1 }
+
+    method getUInt8 {
+        SomeIpMethodID = 31000
+        SomeIpReliable = true
+    }
+
+    method getUInt16 {
+        SomeIpMethodID = 31001
+        SomeIpReliable = true
+    }
+
+    method getUInt32 {
+        SomeIpMethodID = 31002
+        SomeIpReliable = true
+    }
+
+    method getUInt64 {
+        SomeIpMethodID = 31003
+        SomeIpReliable = true
+    }
+
+    method getInt8 {
+        SomeIpMethodID = 31004
+        SomeIpReliable = true
+    }
+
+    method getInt16 {
+        SomeIpMethodID = 31005
+        SomeIpReliable = true
+    }
+
+    method getInt32 {
+        SomeIpMethodID = 31006
+        SomeIpReliable = true
+    }
+
+    method getInt64 {
+        SomeIpMethodID = 31007
+        SomeIpReliable = true
+    }
+
+    method getInteger {
+        SomeIpMethodID = 31008
+        SomeIpReliable = true
+    }
+
+    method getBoolean {
+        SomeIpMethodID = 31009
+        SomeIpReliable = true
+    }
+
+    method getFloat {
+        SomeIpMethodID = 31010
+        SomeIpReliable = true
+    }
+
+    method getDouble {
+        SomeIpMethodID = 31011
+        SomeIpReliable = true
+    }
+
+    method getString {
+        SomeIpMethodID = 31012
+        SomeIpReliable = true
+    }
+
+    method getManyString {
+        SomeIpMethodID = 31013
+        SomeIpReliable = true
+    }
+
+    method getMixed {
+        SomeIpMethodID = 31014
+        SomeIpReliable = true
+    }
+    
+    method setManyString {
+        SomeIpMethodID = 31015
+        SomeIpReliable = true
+    }
+
+    method setMixed {
+        SomeIpMethodID = 31016
+        SomeIpReliable = true
+    }    
+}
+
