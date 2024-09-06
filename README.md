@@ -1,7 +1,7 @@
-# thesis-implementation
+# SOME/IP Firewall
 
 ## Description
-This is the repositody contiaing the source code that was designed and implemented within the scope of the "Implementation of a SOME/IP Firewall with Deep Packet Inspection for automotive use-cases" thesis by Eva Zorman at University of Turku, 2024. 
+This is the repositody contiaing the source code that was designed and implemented within the scope of the work of "Implementation of a SOME/IP Firewall with Deep Packet Inspection for automotive use-cases" by Eva Zorman at University of Turku, 2024. 
 
 The repository is split between a realtime environment which provides two docker containers for both a HelloWorld service and client CAPI application and a firewall that can capture the data sent between the two containers, and an environment that contains a SOME/IP firewall implementation that takes PCAP files as input used to benchmark the implementaiton.
 
